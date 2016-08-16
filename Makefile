@@ -2,10 +2,7 @@ MKDIR_P = mkdir -p
 
 all: shell_script
 
-shell_script: bin/go.sh
+shell_script: go.sh
 
-bin/go.sh:
-	@mkdir -p bin
-	@cp go.sh bin
-
-
+install: shell_script
+	@cp go.sh /usr/local/sbin
